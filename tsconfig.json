@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+     "strict": true,
+     "module": "ES6",
+     "target": "ES6",
+     "lib": ["ES2017", "dom","DOM.Iterable"],    /* Specify library files to be included in the compilation. */
+     "esModuleInterop": true,
+    //  "sourceMap": true,
+    //  "rootDir": "./src",
+   	"jsx": "react-jsx",
+     "downlevelIteration": true,    
+     "noEmitOnError": true,
+     "allowJs": true,
+     "skipLibCheck": true,
+     "moduleResolution": "node",  
+     "allowSyntheticDefaultImports": true, 
+     "resolveJsonModule": true,
+     "typeRoots": [ "node_modules/@types" ],
+     "types": ["chrome-types"]
+  },
+  "exclude": [
+    "node_modules",
+    "public",
+    "./src/*.js",
+    "*.js",
+  ]
+}
