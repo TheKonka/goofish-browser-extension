@@ -1,12 +1,18 @@
-chrome.tabs.onCreated.addListener(function (tab) {
-	// 在这里处理新标签页的打开事件
-	console.log(tab);
-	if (tab.pendingUrl?.startsWith('https://m.tb.cn/')) {
-		chrome.windows.create({
-			url: tab.pendingUrl,
-			type: 'popup',
-			width: 375,
-			height: 812,
-		});
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+	if (changeInfo.url?.startsWith('https://h5.m.goofish.com/')) {
+		chrome.tabs
+			.query({
+				currentWindow: true,
+			})
+			.then((res) => {
+				if (res.length !== 1) {
+					chrome.windows.create({
+						url: changeInfo.url,
+						type: 'popup',
+						width: 375,
+						height: 812,
+					});
+				}
+			});
 	}
 });

@@ -1,14 +1,16 @@
 {
 	"name": "goofish-browser-extension",
 	"version": "1.0.0",
-	"description": "",
+	"description": "以手机尺寸的浏览器窗口浏览闲鱼",
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack --config webpack.dev.js --watch",
 		"build": "webpack --config webpack.prod.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"keywords": [],
+	"keywords": [
+		"闲鱼"
+	],
 	"author": "konka",
 	"license": "MIT",
 	"devDependencies": {
