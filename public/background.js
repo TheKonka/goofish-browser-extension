@@ -6,8 +6,8 @@ var __webpack_exports__ = {};
   \***************************/
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    var _a;
-    if ((_a = changeInfo.url) === null || _a === void 0 ? void 0 : _a.startsWith('https://h5.m.goofish.com/')) {
+    var _a, _b;
+    if (((_a = changeInfo.url) === null || _a === void 0 ? void 0 : _a.startsWith('https://h5.m.goofish.com/')) || ((_b = changeInfo.url) === null || _b === void 0 ? void 0 : _b.startsWith('https://m.zhuanzhuan.com/'))) {
         chrome.tabs
             .query({
             currentWindow: true,

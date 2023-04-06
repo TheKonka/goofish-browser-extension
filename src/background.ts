@@ -1,5 +1,5 @@
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-	if (changeInfo.url?.startsWith('https://h5.m.goofish.com/')) {
+	if (changeInfo.url?.startsWith('https://h5.m.goofish.com/') || changeInfo.url?.startsWith('https://m.zhuanzhuan.com/')) {
 		chrome.tabs
 			.query({
 				currentWindow: true,
